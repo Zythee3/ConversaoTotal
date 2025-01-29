@@ -3,7 +3,7 @@ import App from './App'
 
 function route() {
   return (
-    <div> <Router>
+    <Router>
     <Routes>
       <Route path="/" element={<App/>} />
       <Route path="/temperature" element={<App/>} />
@@ -13,7 +13,7 @@ function route() {
       <Route path="/speed" element={<App/>} />
       <Route path="/weight" element={<App/>} />
     </Routes>
-  </Router></div>
+  </Router>
   )
 }
 
