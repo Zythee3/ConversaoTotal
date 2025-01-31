@@ -1,0 +1,11 @@
+body{
+    
+    background-color: #EFF2F1;
+    font-family: 'Inter', sans-serif;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100vw;
+    
+}
