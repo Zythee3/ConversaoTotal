@@ -1,0 +1,21 @@
+.dropDown {
+  display: flex;
+  align-items: center;
+
+}
+
+.dropDown select {
+  color: black;
+  border: none;
+  height: 100%;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  
+
+  
+}
+
+
+
