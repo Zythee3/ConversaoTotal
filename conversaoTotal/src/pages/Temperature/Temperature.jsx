@@ -9,6 +9,11 @@ const Temperature = ({title}) => {
   const [unit2, setUnit2] = useState("Metros (m)");
   const options = ["Quilômetro (km)","Hectômetro (hm)","Decâmetro (dam)" ,"Metros (m)","Decímetro (dm)", "Centímetros (cm)", "Milímetros (mm)", ];
   
+  const changeValueUnit = () =>{
+    setUnit(unit2);
+    setUnit2(unit);
+  } 
+  
   return (
     <div className="divMain">
       <HomePage />
@@ -18,7 +23,7 @@ const Temperature = ({title}) => {
     
           <InputDropDown options={options} value={unit} onChange={setUnit} />
 
-          <button>
+          <button onClick={changeValueUnit}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

@@ -27,7 +27,7 @@
 .divInput {
   display: flex;
   justify-content: space-between;
-  /* width: 80%; */
+  gap: 12px;
 }
 
 .divInput input {
@@ -39,5 +39,8 @@
 
 .divInput button{
     background-color: white;
+    outline: none;
+    border: none;
+
     /* height: 30px; */
 }

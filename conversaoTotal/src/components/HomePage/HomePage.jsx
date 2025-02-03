@@ -9,8 +9,8 @@ function NavBar() {
         <div className="siteLogo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
           >
             <rect width="24" height="24" fill="none" />
