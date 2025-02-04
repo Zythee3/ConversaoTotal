@@ -3,7 +3,7 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  border: #d8d7d7 1px solid;
+  border: #979595 1px solid;
   border-radius: 30px;
   gap: 50px;
   background-color: white;
@@ -31,7 +31,7 @@
 }
 
 .divInput input {
-  border: black 1px solid;
+  color: black;
   background-color: white;
   border-radius: 5px;
   height: 30px;
@@ -41,6 +41,4 @@
     background-color: white;
     outline: none;
     border: none;
-
-    /* height: 30px; */
 }

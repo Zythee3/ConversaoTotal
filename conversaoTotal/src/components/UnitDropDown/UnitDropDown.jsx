@@ -1,11 +1,11 @@
 import React from "react";
 import "./UnitDropDown.css";
 
-const UnitDropdown = ({ options, value, onChange }) => {
+const UnitDropdown = ({ options, unit, onChange }) => {
   return (
     <div className="dropDown">
 
-      <select value={value} onChange={(e) => onChange(e.target.value)}>
+      <select value={unit} onChange={(e) => onChange(e.target.value)}>
         {Array.isArray(options) &&
           options.map((option, index) => (
             <option key={option}>
