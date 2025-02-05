@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import UnitDropdown from "../UnitDropDown/UnitDropDown";
 import "./InputDropDown.css";
 import { useState } from "react";
-// import LenghtCalculation from "../../services/calculations/LengthCalculation/LenghtCalculation";
-import LenghtCalculation from "../../services/calculations/LengthCalculation/LenghtCalculation";
 import LenghtCalculationResult from "../../services/calculations/LengthCalculation/LenghtCalculationResult";
 
 
@@ -11,10 +9,11 @@ const InputDropDown = ({ options, unit, unit2, setUnit, setUnit2, onChange, onCh
   const [valueInput, setInputValue] = useState("");
   const [valueInput2, setInputValue2] = useState("");
 
+
   const handleChange = (e) => {
     console.log("Valor atual:", e.target.value);
     setInputValue(e.target.value);
-    setInputValue2(LenghtCalculationResult(e.target.value, "km", "m"));
+    setInputValue2(LenghtCalculationResult(e.target.value, unit, unit2));
   };
   const handleChange2 = (e) => {
     console.log("Valor atual:", e.target.value);
