@@ -1,9 +1,4 @@
-import React from 'react';
-
-const LenghtCalculation = () => {
-  console.log("oi" + value);
-
-  const lengthConversions = {
+const lengthConversions = {
     km: { hec: 10, dam: 100, m: 1000, dm: 10000, cm: 100000, mm: 1000000 },
     hec: { km: 0.1, dam: 10, m: 100, dm: 1000, cm: 10000, mm: 100000 },
     dam: { km: 0.01, hec: 0.1, m: 10, dm: 100, cm: 1000, mm: 10000 },
@@ -12,17 +7,10 @@ const LenghtCalculation = () => {
     cm: { km: 0.00001, hec: 0.0001, dam: 0.001, m: 0.01, dm: 0.1, mm: 10 },
     mm: { km: 0.000001, hec: 0.00001, dam: 0.0001, m: 0.001, dm: 0.01, cm: 0.1 },
   };
-
+  
   const LenghtCalculationResult = (value, fromUnit, toUnit) => {
     const factor = lengthConversions[fromUnit][toUnit];
     return value * factor;
   };
-
-  return (
-    <div>
-      <p>Resultado da conversão: {result}</p>
-    </div>
-  );
-};
-
-export default LenghtCalculation;
+  
+  export default LenghtCalculationResult;
