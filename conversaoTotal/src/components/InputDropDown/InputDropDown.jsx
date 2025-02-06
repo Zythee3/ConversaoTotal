@@ -8,7 +8,19 @@ import LenghtCalculationResult from "../../services/calculations/LengthCalculati
 const InputDropDown = ({ options, unit, unit2, setUnit, setUnit2, onChange, onChange2 }) => {
   const [valueInput, setInputValue] = useState("");
   const [valueInput2, setInputValue2] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
 
+  useEffect(() => {
+    if (valueInput) {
+      setInputValue2(LenghtCalculationResult(valueInput, unit, unit2));
+    }
+  }, [unit]);
+
+  useEffect(() => {
+    if (valueInput2) {
+      setInputValue2(LenghtCalculationResult(valueInput, unit2, unit));
+    }
+  }, [unit2]);
 
   const handleChange = (e) => {
     console.log("Valor atual:", e.target.value);
@@ -17,8 +29,8 @@ const InputDropDown = ({ options, unit, unit2, setUnit, setUnit2, onChange, onCh
   };
   const handleChange2 = (e) => {
     console.log("Valor atual:", e.target.value);
-    setInputValue(e.target.value / 100);
     setInputValue2(e.target.value);
+    setInputValue(LenghtCalculationResult(e.target.value, unit2, unit));
   };
 
   const changeUnit = () => {
@@ -32,6 +44,9 @@ const InputDropDown = ({ options, unit, unit2, setUnit, setUnit2, onChange, onCh
         <input
           type="text"
           value={valueInput}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          
           onChange={handleChange}
           placeholder={"Digite o valor"}
         />
@@ -42,8 +57,8 @@ const InputDropDown = ({ options, unit, unit2, setUnit, setUnit2, onChange, onCh
       <button onClick={changeUnit}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="26"
+          height="26"
           viewBox="0 0 20 20"
         >
           <path

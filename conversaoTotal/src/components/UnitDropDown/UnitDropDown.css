@@ -1,7 +1,6 @@
 .dropDown {
   display: flex;
   align-items: center;
-
 }
 
 .dropDown select {
@@ -11,11 +10,6 @@
   background: #fff;
   cursor: pointer;
   font-size: 14px;
+  font-style: bold;
   outline: none;
-  
-
-  
 }
-
-
-

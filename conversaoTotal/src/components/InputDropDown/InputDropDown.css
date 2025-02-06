@@ -1,10 +1,17 @@
 .input-dropdown-container {
     display: flex;
-    border: 1px solid #000;
-    border-radius: 4px;
+    border: 2px solid #a4a5a6;
+    border-radius: 6px;
     align-items: center;
-    height: 50px;
+    height: 60px;
+    
   }
+
+  .input-dropdown-container:focus-within{
+    border: 2px solid #001e2b;
+    transition: border-color 0.4s ease;
+  }
+
 
   .divInputDropDown{
     display: flex;

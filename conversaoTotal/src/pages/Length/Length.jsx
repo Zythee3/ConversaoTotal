@@ -4,9 +4,9 @@ import { useState } from "react";
 
 const Length = () => {
 
-  const [unit, setUnit] = useState("Metros");
-  const [unit2, setUnit2] = useState("Metros");
-  const options = ["Quilômetro","Hectômetro","Decâmetro" ,"Metros","Decímetro", "Centímetros", "Milímetros", ];
+  const [unit, setUnit] = useState("Metros (m)");
+  const [unit2, setUnit2] = useState("Metros (m)");
+  const options = ["Quilômetro (km)","Hectômetro (hm)","Decâmetro (dam)", "Metros (m)","Decímetro (dm)", "Centímetro (cm)", "Milímetro (mm)", ];
 
   return (
     <div>

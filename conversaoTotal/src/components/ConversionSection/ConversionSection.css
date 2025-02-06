@@ -1,0 +1,29 @@
+.selecaoConversao {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttonsSelecao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 90vw;
+}
+
+.buttonsSelecao button {
+  background-color: var(--primary-color);
+  width: 100%;
+  border: #3583c9 1px solid;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 16px;
+}

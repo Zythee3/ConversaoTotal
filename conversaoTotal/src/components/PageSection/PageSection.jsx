@@ -3,6 +3,7 @@ import HomePage from "../HomePage/HomePage";
 import "./PageSection.css";
 import InputDropDown from "../InputDropDown/InputDropDown";
 import { useState } from "react";
+import ConversionSection from "../ConversionSection/ConversionSection";
 
 const PageSection = ({ title, unit, setUnit, unit2, setUnit2, options }) => {
   return (
@@ -14,6 +15,9 @@ const PageSection = ({ title, unit, setUnit, unit2, setUnit2, options }) => {
           <InputDropDown options={options} unit={unit} unit2={unit2} setUnit={setUnit} setUnit2={setUnit2} onChange2={setUnit2} onChange={setUnit} />
         </div>
       </div>
+        <div>
+          <ConversionSection />
+        </div>
     </div>
   );
 };
