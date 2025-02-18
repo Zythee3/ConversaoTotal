@@ -1,19 +1,25 @@
 import React from "react";
+import PageSection from "../../components/PageSection/PageSection";
+import { useState } from "react";
 
 const Speed = () => {
-  const [unit, setUnit] = useState("Metros (m)");
-  const [unit2, setUnit2] = useState("Metros (m)");
-  const options = [
-    "Quilômetro (km)",
-    "Hectômetro (hm)",
-    "Decâmetro (dam)",
-    "Metros (m)",
-    "Decímetro (dm)",
-    "Centímetros (cm)",
-    "Milímetros (mm)",
-  ];
+  const [unit, setUnit] = useState("Metros por segundos (m/s)");
+  const [unit2, setUnit2] = useState("Quilômetros por hora (km/h)");
+  const options = ["Metros por segundos (m/s)", "Quilômetros por hora (km/h)"];
 
-  return <div>Speed</div>;
+  return (
+    <div>
+      <PageSection
+        title={"Velocidade"}
+        type={"Speed"}
+        unit={unit}
+        setUnit={setUnit}
+        unit2={unit2}
+        setUnit2={setUnit2}
+        options={options}
+      />
+    </div>
+  );
 };
 
 export default Speed;

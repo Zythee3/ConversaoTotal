@@ -8,7 +8,6 @@ const lengthConversions = {
     mm: { km: 0.000001, hm: 0.00001, dam: 0.0001, m: 0.001, dm: 0.01, cm: 0.1, mm: 1 },
   };
 
-  
   const LenghtCalculationResult = (value, fromUnit, toUnit) => {
     // const factor = 1
     const unitMapping = {

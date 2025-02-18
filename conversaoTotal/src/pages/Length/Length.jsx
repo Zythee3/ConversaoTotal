@@ -10,7 +10,7 @@ const Length = () => {
 
   return (
     <div>
-        <PageSection title={"Comprimento"} unit={unit} setUnit={setUnit} unit2={unit2} setUnit2={setUnit2} options={options}/>
+        <PageSection title={"Comprimento"} type={"Length"} unit={unit} setUnit={setUnit} unit2={unit2} setUnit2={setUnit2} options={options}/>
     </div>
   )
 }
