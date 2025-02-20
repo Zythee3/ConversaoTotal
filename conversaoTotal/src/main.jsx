@@ -13,7 +13,7 @@ import Time from "./pages/Time/Time.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <Length />,
   },
   {
     path: "/length",
