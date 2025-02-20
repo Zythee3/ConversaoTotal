@@ -1,3 +1,3 @@
-const TimeConversion = {
-    "Horas (h)": {"" }
-}
+// const TimeConversion = {
+//     "Horas (h)": {"" }
+// }

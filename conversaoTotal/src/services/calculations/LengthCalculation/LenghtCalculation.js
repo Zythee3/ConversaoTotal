@@ -11,22 +11,19 @@ const lengthConversions = {
   const LenghtCalculationResult = (value, fromUnit, toUnit) => {
     // const factor = 1
     const unitMapping = {
-      "quilômetro (km)": "km",
-      "hectômetro (hm)": "hm",
-      "decâmetro (dam)": "dam",
-      "metros (m)": "m",
-      "decímetro (dm)": "dm",
-      "centímetro (cm)": "cm",
-      "milímetro (mm)": "mm",
+      "Quilômetro (km)": "km",
+      "Hectômetro (hm)": "hm",
+      "Decâmetro (dam)": "dam",
+      "Metro (m)": "m",
+      "Decímetro (dm)": "dm",
+      "Centímetro (cm)": "cm",
+      "Milímetro (mm)": "mm",
     };
 
-    
-    fromUnit = unitMapping[fromUnit.toLowerCase()];
-    toUnit = unitMapping[toUnit.toLowerCase()];
-    
+    fromUnit = unitMapping[fromUnit];
+    toUnit = unitMapping[toUnit];
     
     const factor = lengthConversions[fromUnit][toUnit];
-    console.log(factor);
     const result = value * factor
     return parseFloat(result.toFixed(2));
     

@@ -5,6 +5,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage.jsx";
 import Length from "./pages/Length/Length.jsx";
 import Speed from "./pages/Speed/Speed.jsx"
+import Weight from "./pages/weight/Weight.jsx";
+import Volume from "./pages/Volume/Volume.jsx";
+import Temperature from "./pages/Temperature/Temperature.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +22,18 @@ const router = createBrowserRouter([
     path: "/speed",
     element: <Speed />,
   },
+  {
+    path: "/weight",
+    element: <Weight />
+  },
+  {
+    path: "/volume",
+    element: <Volume />
+  },
+  {
+    path: "/temperature",
+    element: <Temperature />
+  }
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>

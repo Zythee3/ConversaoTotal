@@ -35,7 +35,7 @@ const ConversionSection = () => {
       <div className="selecaoConversao">
         <span>Seleção de conversão</span>
         <div className="buttonsSelecao">
-          <Link className="link">
+          <Link className="link" to="/weight">
             <button
               className={currentTheme === "weight" ? "buttonActive" : "button"}
               onClick={() => setCurrentTheme("weight")}
@@ -44,19 +44,19 @@ const ConversionSection = () => {
               Peso
             </button>
           </Link>
-          <Link className="link">
+          <Link className="link" to="/volume">
             <button
-              className={currentTheme === "volume" ? "button active" : "button"}
+              className={currentTheme === "volume" ? "buttonActive" : "button"}
               onClick={() => setCurrentTheme("volume")}
             >
               <img src={IconVolume} alt="volume" />
               Volume
             </button>
           </Link>
-          <Link className="link">
+          <Link className="link" to="/temperature">
             <button
               className={
-                currentTheme === "temperature" ? "button active" : "button"
+                currentTheme === "temperature" ? "buttonActive" : "button"
               }
               onClick={() => setCurrentTheme("temperature")}
             >
@@ -64,9 +64,9 @@ const ConversionSection = () => {
               Temperatura
             </button>
           </Link>
-          <Link className="link">
+          <Link className="link" to="/time">
             <button
-              className={currentTheme === "time" ? "button active" : "button"}
+              className={currentTheme === "time" ? "buttonActive" : "button"}
               onClick={() => setCurrentTheme("time")}
             >
               <img src={IconTime} alt="" />
