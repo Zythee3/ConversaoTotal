@@ -25,7 +25,6 @@ function Fahrenheit (value, toUnit){
     }
 }
 
-
 const TemperatureCalculationResult = (value, fromUnit, toUnit) =>{
     switch(fromUnit){
         case "Celsius (°c)":
