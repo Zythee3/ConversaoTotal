@@ -8,6 +8,7 @@ import Speed from "./pages/Speed/Speed.jsx"
 import Weight from "./pages/weight/Weight.jsx";
 import Volume from "./pages/Volume/Volume.jsx";
 import Temperature from "./pages/Temperature/Temperature.jsx";
+import Time from "./pages/Time/Time.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/temperature",
     element: <Temperature />
+  },
+  {
+    path: "/time",
+    element: <Time />
   }
 ]);
 createRoot(document.getElementById("root")).render(

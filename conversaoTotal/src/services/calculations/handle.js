@@ -3,6 +3,7 @@ import SpeedCalculationResult from "./SpeedCalculation/SpeedCalculation";
 import WeightCalculationResult from "./WeightCalculation/WeightCalculation";
 import VolumeCalculationResult from "./VolumeCalculation/VolumeCalculation"
 import TemperatureCalculationResult from "./TemperatureCalculation/TemperatureCalculation";
+import TimeCalculationResult from "./TimeCalculation/TimeCalculation";
 
 const ProcessRequest = (type, value, unit, unit2) => {
   switch (type) {
@@ -16,6 +17,8 @@ const ProcessRequest = (type, value, unit, unit2) => {
       return VolumeCalculationResult(value, unit, unit2);
     case "Temperature":
       return TemperatureCalculationResult(value, unit, unit2);
+    case "Time":
+      return TimeCalculationResult(value, unit, unit2);
   }
 };
 
