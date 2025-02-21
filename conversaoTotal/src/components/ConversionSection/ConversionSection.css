@@ -16,11 +16,12 @@
   gap: 18px;
   width: 90vw;
   height: 50px;
+
 }
 
 .buttonsSelecao button {
   background-color: var(--primary-color);
-  width: 100%;
+  width: 95%;
   border: #3583c9 1px solid;
   border-radius: 5px;
   display: flex;

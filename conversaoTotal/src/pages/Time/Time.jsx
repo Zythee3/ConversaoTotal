@@ -10,6 +10,7 @@ const Time = () => {
     "Mês",
     "Semanas",
     "Horas",
+    "Minutos",
     "Segundos"
   ];
 
