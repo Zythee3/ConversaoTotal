@@ -15,17 +15,15 @@ const Weight = () => {
     "Miligrama (mg)",
   ];
   return (
-    <div>
-      <PageSection
-        title={"Peso"}
-        type={"Weight"}
-        unit={unit}
-        setUnit={setUnit}
-        unit2={unit2}
-        setUnit2={setUnit2}
-        options={options}
-      />
-    </div>
+    <PageSection
+      title={"Peso"}
+      type={"Weight"}
+      unit={unit}
+      setUnit={setUnit}
+      unit2={unit2}
+      setUnit2={setUnit2}
+      options={options}
+    />
   );
 };
 

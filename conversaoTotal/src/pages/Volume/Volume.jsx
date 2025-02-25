@@ -16,17 +16,15 @@ const Volume = () => {
   ];
 
   return (
-    <div>
-      <PageSection
-        title={"Volume"}
-        type={"Volume"}
-        unit={unit}
-        setUnit={setUnit}
-        unit2={unit2}
-        setUnit2={setUnit2}
-        options={options}
-      />
-    </div>
+    <PageSection
+      title={"Volume"}
+      type={"Volume"}
+      unit={unit}
+      setUnit={setUnit}
+      unit2={unit2}
+      setUnit2={setUnit2}
+      options={options}
+    />
   );
 };
 

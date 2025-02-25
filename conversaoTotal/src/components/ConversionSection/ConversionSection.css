@@ -38,10 +38,10 @@
   outline: none;
 }
 
-.buttonsSelecao .buttonActive {
+/* .buttonsSelecao .buttonActive {
   background-color: #072383;
   outline: none;
-}
+} */
 
 .link{
   transition: background-color 0.3s ease-in-out;

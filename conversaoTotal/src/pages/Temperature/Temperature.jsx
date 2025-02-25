@@ -1,6 +1,6 @@
-import React from 'react'
-import PageSection from '../../components/PageSection/PageSection'
-import { useState } from 'react';
+import React from "react";
+import PageSection from "../../components/PageSection/PageSection";
+import { useState } from "react";
 
 const temperature = () => {
   const [unit, setUnit] = useState("Celsius (°c)");
@@ -8,20 +8,16 @@ const temperature = () => {
   const options = ["Celsius (°c)", "Fahrenheit (°f)", "Kelvin (k)"];
 
   return (
-    <div>
-      <PageSection
-        title={"Temperatura"}
-        type={"Temperature"}
-        unit={unit}
-        setUnit={setUnit}
-        unit2={unit2}
-        setUnit2={setUnit2}
-        options={options}
-      />
+    <PageSection
+      title={"Temperatura"}
+      type={"Temperature"}
+      unit={unit}
+      setUnit={setUnit}
+      unit2={unit2}
+      setUnit2={setUnit2}
+      options={options}
+    />
+  );
+};
 
-
-    </div>
-  )
-}
-
-export default temperature
+export default temperature;

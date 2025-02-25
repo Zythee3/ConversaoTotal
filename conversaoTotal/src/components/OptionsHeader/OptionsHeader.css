@@ -1,0 +1,24 @@
+.OptionsHeaderButtons {
+  display: flex;
+  gap: 2px;
+}
+
+.OptionsHeaderButtons button {
+  background-color: #eff2f1;
+  font-size: 14px;
+  outline: none;
+  color: #8f9193;;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.OptionsHeaderButtons button:hover {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+
+.OptionsHeaderButtons .ButtonActive{
+    color: black;
+}

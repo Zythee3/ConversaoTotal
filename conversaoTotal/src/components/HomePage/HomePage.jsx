@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomePage.css";
-import { Link } from "react-router-dom";
+import OptionsHeader from "../OptionsHeader/OptionsHeader";
 
 function NavBar() {
   return (
@@ -26,8 +26,9 @@ function NavBar() {
         </div>
         <span>Conversão Total</span>
       </div>
-{/*  */}
-      
+      <div className="OptionsUnitHeader">
+        <OptionsHeader />
+      </div>
     </div>
   );
 }

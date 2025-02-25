@@ -3,8 +3,8 @@ import PageSection from "../../components/PageSection/PageSection";
 import { useState } from "react";
 
 const Length = () => {
-  const [unit, setUnit] = useState("Metros (m)");
-  const [unit2, setUnit2] = useState("Metros (m)");
+  const [unit, setUnit] = useState("Metro (m)");
+  const [unit2, setUnit2] = useState("Metro (m)");
   const options = [
     "Quilômetro (km)",
     "Hectômetro (hm)",
@@ -16,17 +16,15 @@ const Length = () => {
   ];
 
   return (
-    <div>
-      <PageSection
-        title={"Comprimento"}
-        type={"Length"}
-        unit={unit}
-        setUnit={setUnit}
-        unit2={unit2}
-        setUnit2={setUnit2}
-        options={options}
-      />
-    </div>
+    <PageSection
+      title={"Comprimento"}
+      type={"Length"}
+      unit={unit}
+      setUnit={setUnit}
+      unit2={unit2}
+      setUnit2={setUnit2}
+      options={options}
+    />
   );
 };
 

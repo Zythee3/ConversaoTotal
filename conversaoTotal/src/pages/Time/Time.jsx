@@ -5,27 +5,18 @@ import PageSection from "../../components/PageSection/PageSection";
 const Time = () => {
   const [unit, setUnit] = useState("Minutos");
   const [unit2, setUnit2] = useState("Horas");
-  const options = [
-    "Ano",
-    "Mês",
-    "Semanas",
-    "Horas",
-    "Minutos",
-    "Segundos"
-  ];
+  const options = ["Ano", "Mês", "Semanas", "Horas", "Minutos", "Segundos"];
 
   return (
-    <div>
-      <PageSection
-        title={"Tempo"}
-        type={"Time"}
-        unit={unit}
-        setUnit={setUnit}
-        unit2={unit2}
-        setUnit2={setUnit2}
-        options={options}
-      />
-    </div>
+    <PageSection
+      title={"Tempo"}
+      type={"Time"}
+      unit={unit}
+      setUnit={setUnit}
+      unit2={unit2}
+      setUnit2={setUnit2}
+      options={options}
+    />
   );
 };
 

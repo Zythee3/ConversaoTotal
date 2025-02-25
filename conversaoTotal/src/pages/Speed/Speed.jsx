@@ -8,17 +8,15 @@ const Speed = () => {
   const options = ["Metros por segundos (m/s)", "Quilômetros por hora (km/h)"];
 
   return (
-    <div>
-      <PageSection
-        title={"Velocidade"}
-        type={"Speed"}
-        unit={unit}
-        setUnit={setUnit}
-        unit2={unit2}
-        setUnit2={setUnit2}
-        options={options}
-      />
-    </div>
+    <PageSection
+      title={"Velocidade"}
+      type={"Speed"}
+      unit={unit}
+      setUnit={setUnit}
+      unit2={unit2}
+      setUnit2={setUnit2}
+      options={options}
+    />
   );
 };
 

@@ -16,7 +16,7 @@ const PageSection = ({ title, type, unit, setUnit, unit2, setUnit2, options }) =
         </div>
       </div>
         <div>
-          <ConversionSection />
+          {/* <ConversionSection /> */}
         </div>
     </div>
   );
