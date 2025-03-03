@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HomePage from "../HomePage/HomePage";
+import HomePage from "../Header/Header";
 import "./PageSection.css";
 import InputDropDown from "../InputDropDown/InputDropDown";
 import { useState } from "react";
@@ -16,7 +16,7 @@ const PageSection = ({ title, type, unit, setUnit, unit2, setUnit2, options }) =
         </div>
       </div>
         <div>
-          
+    
         </div>
     </div>
   );
