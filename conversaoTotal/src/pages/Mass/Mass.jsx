@@ -25,7 +25,7 @@ const Mass = () => {
   }, [location.search]);
   return (
     <PageSection
-      title={"Peso"}
+      title={"Massa"}
       type={"Mass"}
       unit={unit}
       setUnit={setUnit}
