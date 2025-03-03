@@ -29,7 +29,7 @@ const DropDownHeader = ({ type }) => {
   ];
 
   const unitsSpeed = [
-    { name: "Metros por segundo", unit: "m/s" },
+    { name: "Metros por segundos", unit: "m/s" },
     { name: "Quilômetros por hora", unit: "km/h" },
   ];
 
