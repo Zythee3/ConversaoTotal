@@ -1,6 +1,6 @@
 import LenghtCalculationResult from "./LengthCalculation/LenghtCalculation";
 import SpeedCalculationResult from "./SpeedCalculation/SpeedCalculation";
-import WeightCalculationResult from "./WeightCalculation/WeightCalculation";
+import MassCalculationResult from "./MassCalculation/MassCalculation"
 import VolumeCalculationResult from "./VolumeCalculation/VolumeCalculation"
 import TemperatureCalculationResult from "./TemperatureCalculation/TemperatureCalculation";
 import TimeCalculationResult from "./TimeCalculation/TimeCalculation";
@@ -11,8 +11,8 @@ const ProcessRequest = (type, value, unit, unit2) => {
       return LenghtCalculationResult(value, unit, unit2);
     case "Speed":
       return SpeedCalculationResult(value, unit, unit2);
-    case "Weight":
-      return WeightCalculationResult(value, unit, unit2);
+    case "Mass":
+      return MassCalculationResult(value, unit, unit2);
     case "Volume":
       return VolumeCalculationResult(value, unit, unit2);
     case "Temperature":

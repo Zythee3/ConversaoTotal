@@ -43,7 +43,7 @@ const DropDownHeader = ({ type }) => {
     { name: "Mililitro", unit: "ml" },
   ];
 
-  const unitsWeight = [
+  const unitsMass = [
     { name: "Quilograma", unit: "kg" },
     { name: "Hectograma", unit: "hg" },
     { name: "Decagrama", unit: "dag" },
@@ -76,9 +76,9 @@ const DropDownHeader = ({ type }) => {
       units = unitsVolume;
       nameLink = "/volume";
       break;
-    case "weight":
-      units = unitsWeight;
-      nameLink = "/weight";
+    case "mass":
+      units = unitsMass;
+      nameLink = "/mass";
       break;
     default:
       units = [];

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import queryString from "query-string";
 
-const Weight = () => {
+const Mass = () => {
   const [unit, setUnit] = useState("");
   const [unit2, setUnit2] = useState("Grama (g)");
   const options = [
@@ -26,7 +26,7 @@ const Weight = () => {
   return (
     <PageSection
       title={"Peso"}
-      type={"Weight"}
+      type={"Mass"}
       unit={unit}
       setUnit={setUnit}
       unit2={unit2}
@@ -36,4 +36,4 @@ const Weight = () => {
   );
 };
 
-export default Weight;
+export default Mass;

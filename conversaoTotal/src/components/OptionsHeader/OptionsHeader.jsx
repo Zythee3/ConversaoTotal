@@ -14,8 +14,8 @@ const OptionsHeader = () => {
     const path = location.pathname;
     if (path.includes("length")) {
       setButtonActive("length");
-    } else if (path.includes("weight")) {
-      setButtonActive("weight");
+    } else if (path.includes("mass")) {
+      setButtonActive("mass");
     } else if (path.includes("volume")) {
       setButtonActive("volume");
     } else if (path.includes("temperature")) {
@@ -108,10 +108,10 @@ const OptionsHeader = () => {
 
         <button
           className="ButtonClass"
-          onClick={() => (setButtonActive("weight"), setDropDownHeaderOpen(true))}
+          onClick={() => (setButtonActive("mass"), setDropDownHeaderOpen(true))}
         >
           Massa
-          {buttonActive === "weight" && dropDownHeaderOpen && (
+          {buttonActive === "mass" && dropDownHeaderOpen && (
             <div ref={ref} className="DropDownHeaderButton">
               <DropDownHeader type={buttonActive}/>
             </div>

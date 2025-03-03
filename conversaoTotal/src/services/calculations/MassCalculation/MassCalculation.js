@@ -1,4 +1,4 @@
-const weightConversions = {
+const massConversions = {
     kg: { kg: 1, hg: 10, dag: 100, g: 1000, dg: 10000, cg: 100000, mg: 1000000 },
     hg: { kg: 0.1, hg: 1, dag: 10, g: 100, dg: 1000, cg: 10000, mg: 100000 },
     dag: { kg: 0.01, hg: 0.1, dag: 1, g: 10, dg: 100, cg: 1000, mg: 10000 },
@@ -9,7 +9,7 @@ const weightConversions = {
 };
 
 
-const WeightCalculationResult = (value, fromUnit, toUnit) =>{
+const MassCalculationResult = (value, fromUnit, toUnit) =>{
 
     const UnitMapping = {
         "Quilograma (kg)" : "kg",
@@ -24,9 +24,9 @@ const WeightCalculationResult = (value, fromUnit, toUnit) =>{
     fromUnit = UnitMapping[fromUnit];
     toUnit = UnitMapping[toUnit];
 
-    const factor = weightConversions[fromUnit][toUnit];    
+    const factor = massConversions[fromUnit][toUnit];    
     const result = value * factor;
     return result;
 }
 
-export default WeightCalculationResult;
+export default MassCalculationResult;
