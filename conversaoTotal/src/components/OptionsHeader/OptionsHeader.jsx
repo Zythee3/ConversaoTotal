@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./OptionsHeader.css";
 import { useLocation } from "react-router-dom";
 import DropDownHeader from "../DropDownHeader/DropDownHeader";
+import { motion } from "framer-motion";
 
 const OptionsHeader = () => {
   const [buttonActive, setButtonActive] = useState("");

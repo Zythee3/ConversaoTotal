@@ -23,8 +23,6 @@ const lengthConversions = {
     fromUnit = unitMapping[fromUnit];
     toUnit = unitMapping[toUnit];
     
-    console.log(toUnit)
-    console.log(fromUnit)
     const factor = lengthConversions[fromUnit][toUnit];
     const result = value * factor
     return parseFloat(result.toFixed(8));

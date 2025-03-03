@@ -4,18 +4,25 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import queryString from "query-string";
 
-
 const Time = () => {
   const [unit, setUnit] = useState("");
-  const [unit2, setUnit2] = useState("Horas");
-  const options = ["Ano", "Mês", "Semanas", "Dias", "Horas", "Minutos", "Segundos"];
-  
+  const [unit2, setUnit2] = useState("Horas (h)");
+  const options = [
+    "Ano (yr)",
+    "Mês (mo)",
+    "Semana (wk)",
+    "Dia (d)",
+    "Horas (h)",
+    "Minuto (min)",
+    "Segundo (s)"
+];
+
   useEffect(() => {
-      const { unit: unitTeste } = queryString.parse(location.search);
-      if (unitTeste) {
-        setUnit(unitTeste);
-      }
-    }, [location.search]);
+    const { unit: unitTeste } = queryString.parse(location.search);
+    if (unitTeste) {
+      setUnit(unitTeste);
+    }
+  }, [location.search]);
 
   return (
     <PageSection
