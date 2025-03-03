@@ -1,9 +1,11 @@
 import React from "react";
-import { useState } from "react";
 import PageSection from "../../components/PageSection/PageSection";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import queryString from "query-string";
 
 const Volume = () => {
-  const [unit, setUnit] = useState("Litro (l)");
+  const [unit, setUnit] = useState("");
   const [unit2, setUnit2] = useState("Litro (l)");
   const options = [
     "Quilolitro (kl)",
@@ -14,6 +16,13 @@ const Volume = () => {
     "Centilitro (cl)",
     "Mililitro (ml)",
   ];
+
+  useEffect(() => {
+      const { unit: unitTeste } = queryString.parse(location.search);
+      if (unitTeste) {
+        setUnit(unitTeste);
+      }
+    }, [location.search]);
 
   return (
     <PageSection

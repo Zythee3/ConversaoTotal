@@ -1,5 +1,6 @@
 import React from "react";
 import "./DropDownHeader.css";
+import { Link } from "react-router-dom";
 
 const DropDownHeader = ({ type }) => {
   const unitsLength = [
@@ -18,13 +19,13 @@ const DropDownHeader = ({ type }) => {
     { name: "Kelvin", unit: "K" },
   ];
   const unitsTime = [
-    { name: "Segundo", unit: "s" },
-    { name: "Minuto", unit: "min" },
-    { name: "Hora", unit: "h" },
-    { name: "Dia", unit: "d" },
-    { name: "Semana", unit: "wk" },
-    { name: "Mês", unit: "mo" },
     { name: "Ano", unit: "yr" },
+    { name: "Mês", unit: "mo" },
+    { name: "Semana", unit: "wk" },
+    { name: "Dia", unit: "d" },
+    { name: "Horas", unit: "h" },
+    { name: "Minuto", unit: "min" },
+    { name: "Segundo", unit: "s" },
   ];
 
   const unitsSpeed = [
@@ -52,45 +53,54 @@ const DropDownHeader = ({ type }) => {
     { name: "Miligrama", unit: "mg" },
   ];
 
-  const handleButtonClick = (e) => {
-    e.stopPropagation();
-  };
-
   let units;
+  let nameLink;
   switch (type) {
     case "length":
       units = unitsLength;
+      nameLink = "/Length";
       break;
     case "temperature":
       units = unitsTemperature;
+      nameLink = "/temperature";
       break;
     case "speed":
       units = unitsSpeed;
+      nameLink = "/speed";
       break;
     case "time":
       units = unitsTime;
+      nameLink = "/time";
       break;
     case "volume":
       units = unitsVolume;
+      nameLink = "/volume";
       break;
     case "weight":
       units = unitsWeight;
+      nameLink = "/weight";
       break;
     default:
       units = [];
   }
 
+  const handleButtonClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
     <div className="DropDownHeader">
       {units.map((units, index) => (
-        <button
-          key={index}
-          className="OptionsDropDown"
-          onClick={handleButtonClick}
-        >
-          <span>{units.name}</span>
-          <span className="spanUnit">({units.unit})</span>
-        </button>
+        <Link to={`${nameLink}?unit=${units.name} (${units.unit}) `} className="link">
+          <button
+            key={index}
+            className="OptionsDropDown"
+            onClick={handleButtonClick}
+          >
+            <span>{units.name}</span>
+            <span className="spanUnit">({units.unit})</span>
+          </button>
+        </Link>
       ))}
     </div>
   );

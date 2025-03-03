@@ -32,3 +32,9 @@ button:focus{
 .spanUnit {
   color: #585b5a;
 }
+
+.link{
+  display: flex;
+  justify-content: center;
+  width: 95%;
+}

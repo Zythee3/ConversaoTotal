@@ -8,7 +8,7 @@ function celsius (value, toUnit) {
 }
 
 function Kelvin (value, toUnit){
-    if (toUnit == "Celsius (°c)"){
+    if (toUnit == "Celsius (°C)"){
         return value - 273;
     }
     else{
@@ -17,7 +17,7 @@ function Kelvin (value, toUnit){
 }
 
 function Fahrenheit (value, toUnit){
-    if (toUnit == "Celsius (°c)"){
+    if (toUnit == "Celsius (°C)"){
         return (value - 32) / 1.8;
     }
     else{
@@ -27,7 +27,7 @@ function Fahrenheit (value, toUnit){
 
 const TemperatureCalculationResult = (value, fromUnit, toUnit) =>{
     switch(fromUnit){
-        case "Celsius (°c)":
+        case "Celsius (°C)":
             if (fromUnit === toUnit){
                 return value;
             }
@@ -35,7 +35,7 @@ const TemperatureCalculationResult = (value, fromUnit, toUnit) =>{
                 return celsius(value, toUnit);
             }
             
-        case "Kelvin (k)":
+        case "Kelvin (K)":
             if (fromUnit === toUnit){
                 return value;
             }
@@ -43,7 +43,7 @@ const TemperatureCalculationResult = (value, fromUnit, toUnit) =>{
                 return Kelvin(value, toUnit);
             } 
 
-        case "Fahrenheit (°f)":
+        case "Fahrenheit (°F)":
             if (fromUnit === toUnit){
                 return value;
             }
