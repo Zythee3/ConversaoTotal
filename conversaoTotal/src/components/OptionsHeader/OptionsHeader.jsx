@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./OptionsHeader.css";
 import { useLocation } from "react-router-dom";
+import DropDownHeader from "../DropDownHeader/DropDownHeader";
 
 const OptionsHeader = () => {
   const [buttonActive, setButtonActive] = useState("");
   const location = useLocation();
+  const [dropDownHeaderOpen, setDropDownHeaderOpen] = useState(false);
+  const ref = useRef(null);
 
   useEffect(() => {
     const path = location.pathname;
@@ -23,25 +26,97 @@ const OptionsHeader = () => {
     }
   }, [location.pathname]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setDropDownHeaderOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+
   return (
-    <div className="OptionsHeaderButtons">
-      <button className={buttonActive === "length" ? "ButtonActive" : "button"}
-      onClick={() => setButtonActive("length")}>Comprimento</button>
+    <div>
+      <div className="OptionsHeaderButtons">
+        <button
+          className="ButtonClass"
+          onClick={() => (
+            setButtonActive("length"), setDropDownHeaderOpen(true)
+          )}
+        >
+          <span>Comprimento</span>
+          {buttonActive === "length" && dropDownHeaderOpen && (
+            <div ref={ref} className="DropDownHeaderButton">
+              <DropDownHeader type={buttonActive}/>
+            </div>
+          )}
+        </button>
 
-      <button className={buttonActive === "temperature" ? "ButtonActive" : "button"}
-      onClick={() => setButtonActive("temperature")}>Temperatura</button>
+        <button
+          className="ButtonClass"
+          onClick={() => (
+            setButtonActive("temperature"), setDropDownHeaderOpen(true)
+          )}
+        >
+          Temperatura
+          {buttonActive === "temperature" && dropDownHeaderOpen && (
+            <div ref={ref} className="DropDownHeaderButton">
+              <DropDownHeader type={buttonActive}/>
+            </div>
+          )}
+        </button>
 
-      <button className={buttonActive === "speed" ? "ButtonActive" : "button"}
-      onClick={() => setButtonActive("speed")}>Velocidade</button>
+        <button
+          className="ButtonClass"
+          onClick={() => (
+            setButtonActive("speed"), setDropDownHeaderOpen(true)
+          )}
+        >
+          Velocidade
+          {buttonActive === "speed" && dropDownHeaderOpen && (
+            <div ref={ref} className="DropDownHeaderButton">
+              <DropDownHeader type={buttonActive}/>
+            </div>
+          )}
+        </button>
 
-      <button className={buttonActive === "time" ? "ButtonActive" : "button"}
-      onClick={() => setButtonActive("time")}>Tempo</button>
+        <button className="ButtonClass" onClick={() => (setButtonActive("time"), setDropDownHeaderOpen(true))}>
+          Tempo
+          {buttonActive === "time" && dropDownHeaderOpen && (
+            <div ref={ref} className="DropDownHeaderButton">
+              <DropDownHeader type={buttonActive}/>
+            </div>
+          )}
+        </button>
 
-      <button className={buttonActive === "volume" ? "ButtonActive" : "button"}
-      onClick={() => setButtonActive("volume")}>Volume</button>
+        <button
+          className="ButtonClass"
+          onClick={() => (setButtonActive("volume"), setDropDownHeaderOpen(true))}
+        >
+          Volume
+          {buttonActive === "volume" && dropDownHeaderOpen && (
+            <div ref={ref} className="DropDownHeaderButton">
+              <DropDownHeader type={buttonActive}/>
+            </div>
+          )}
+        </button>
 
-      <button className={buttonActive === "weight" ? "ButtonActive" : "button"}
-      onClick={() => setButtonActive("weight")}>Massa</button>
+        <button
+          className="ButtonClass"
+          onClick={() => (setButtonActive("weight"), setDropDownHeaderOpen(true))}
+        >
+          Massa
+          {buttonActive === "weight" && dropDownHeaderOpen && (
+            <div ref={ref} className="DropDownHeaderButton">
+              <DropDownHeader type={buttonActive}/>
+            </div>
+          )}
+        </button>
+      </div>
     </div>
   );
 };

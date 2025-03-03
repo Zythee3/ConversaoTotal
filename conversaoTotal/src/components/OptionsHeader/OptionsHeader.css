@@ -1,24 +1,31 @@
 .OptionsHeaderButtons {
   display: flex;
-  gap: 2px;
+  gap: 5px;
 }
 
-.OptionsHeaderButtons button {
+.ButtonClass{
   background-color: #eff2f1;
   font-size: 14px;
-  outline: none;
-  color: #8f9193;;
-  border: none;
+  color: black;
   display: flex;
   justify-content: center;
+  position: relative;
+  outline: none;
+  border-radius: 10px;
 }
 
-.OptionsHeaderButtons button:hover {
-    color: black;
-    transition: color 0.3s ease;
+.ButtonClass:hover {
+  background-color: #b5b7ba;
+  transition: background-color 0.5s ease;
 }
 
+.ButtonClass:focus {
+  background-color: #b5b7ba;
+  outline: none; 
+}
 
-.OptionsHeaderButtons .ButtonActive{
-    color: black;
+.DropDownHeaderButton {
+  position: absolute;
+  top: 100%;
+  z-index: 10;
 }

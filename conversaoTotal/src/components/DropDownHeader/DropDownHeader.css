@@ -1,0 +1,34 @@
+.DropDownHeader {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+  background-color: white;
+  width: 300px;
+  align-items: center;
+  padding: 15px 0px;
+  border: #979595 1px solid;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.OptionsDropDown {
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  border-radius: 10px;
+}
+button:hover {
+  border: var(--second-color) 1px solid;
+}
+
+button:focus{
+  background-color: #b5b7ba;
+  outline: none;
+}
+
+.spanUnit {
+  color: #585b5a;
+}

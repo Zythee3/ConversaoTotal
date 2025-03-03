@@ -9,6 +9,7 @@ import Weight from "./pages/weight/Weight.jsx";
 import Volume from "./pages/Volume/Volume.jsx";
 import Temperature from "./pages/Temperature/Temperature.jsx";
 import Time from "./pages/Time/Time.jsx";
+import DropDownHeader from "./components/DropDownHeader/DropDownHeader.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/time",
     element: <Time />
+  },
+  {
+    path: "/teste",
+    element: <DropDownHeader />
   }
 ]);
 createRoot(document.getElementById("root")).render(

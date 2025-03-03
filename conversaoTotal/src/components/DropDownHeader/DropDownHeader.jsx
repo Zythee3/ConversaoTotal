@@ -1,11 +1,99 @@
-import React from 'react'
+import React from "react";
+import "./DropDownHeader.css";
 
-const DropDownHeader = () => {
+const DropDownHeader = ({ type }) => {
+  const unitsLength = [
+    { name: "Quilômetro", unit: "km" },
+    { name: "Hectômetro", unit: "hm" },
+    { name: "Decâmetro", unit: "dam" },
+    { name: "Metro", unit: "m" },
+    { name: "Decímetro", unit: "dm" },
+    { name: "Centímetro", unit: "cm" },
+    { name: "Milímetro", unit: "mm" },
+  ];
+
+  const unitsTemperature = [
+    { name: "Celsius", unit: "°C" },
+    { name: "Fahrenheit", unit: "°F" },
+    { name: "Kelvin", unit: "K" },
+  ];
+  const unitsTime = [
+    { name: "Segundo", unit: "s" },
+    { name: "Minuto", unit: "min" },
+    { name: "Hora", unit: "h" },
+    { name: "Dia", unit: "d" },
+    { name: "Semana", unit: "wk" },
+    { name: "Mês", unit: "mo" },
+    { name: "Ano", unit: "yr" },
+  ];
+
+  const unitsSpeed = [
+    { name: "Metros por segundo", unit: "m/s" },
+    { name: "Quilômetros por hora", unit: "km/h" },
+  ];
+
+  const unitsVolume = [
+    { name: "Quilolitro", unit: "kl" },
+    { name: "Hectolitro", unit: "hl" },
+    { name: "Decalitro", unit: "dal" },
+    { name: "Litro", unit: "l" },
+    { name: "Decilitro", unit: "dl" },
+    { name: "Centilitro", unit: "cl" },
+    { name: "Mililitro", unit: "ml" },
+  ];
+
+  const unitsWeight = [
+    { name: "Quilograma", unit: "kg" },
+    { name: "Hectograma", unit: "hg" },
+    { name: "Decagrama", unit: "dag" },
+    { name: "Grama", unit: "g" },
+    { name: "Decigrama", unit: "dg" },
+    { name: "Centigrama", unit: "cg" },
+    { name: "Miligrama", unit: "mg" },
+  ];
+
+  const handleButtonClick = (e) => {
+    e.stopPropagation();
+  };
+
+  let units;
+  switch (type) {
+    case "length":
+      units = unitsLength;
+      break;
+    case "temperature":
+      units = unitsTemperature;
+      break;
+    case "speed":
+      units = unitsSpeed;
+      break;
+    case "time":
+      units = unitsTime;
+      break;
+    case "volume":
+      units = unitsVolume;
+      break;
+    case "weight":
+      units = unitsWeight;
+      break;
+    default:
+      units = [];
+  }
+
   return (
-    <div>
-        
+    <div className="DropDownHeader">
+      {units.map((units, index) => (
+        <button
+          key={index}
+          className="OptionsDropDown"
+          onClick={handleButtonClick}
+        >
+          <span>{units.name}</span>
+          <span className="spanUnit">({units.unit})</span>
+        </button>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default DropDownHeader
+export default DropDownHeader;
