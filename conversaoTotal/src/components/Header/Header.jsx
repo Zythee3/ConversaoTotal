@@ -3,7 +3,7 @@ import "./Header.css";
 import OptionsHeader from "../OptionsHeader/OptionsHeader";
 import IconSite from "../../assets/icons/IconSite.svg"
 
-function NavBar() {
+function Header() {
   return (
     <div className="divNavBar">
       <div className="tituloLogo">
@@ -19,4 +19,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Header;

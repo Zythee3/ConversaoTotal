@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
-import HomePage from "../Header/Header";
 import "./PageSection.css";
 import InputDropDown from "../InputDropDown/InputDropDown";
-import { useState } from "react";
+import Header from "../Header/Header"
 
 
 const PageSection = ({ title, type, unit, setUnit, unit2, setUnit2, options }) => {
   return (
     <div className="divMain">
-      <HomePage />
+      <Header />
       <div className="calculationArea">
         <div className="calculator">Conversão de {title}</div>
         <div className="divInput">

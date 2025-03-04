@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import queryString from "query-string";
 
 
-const Length = ({}) => {
+const Length = () => {
   const [unit, setUnit] = useState("");
   const [unit2, setUnit2] = useState("Metro (m)");
 

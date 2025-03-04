@@ -8,12 +8,13 @@ import Mass from "./pages/Mass/Mass.jsx";
 import Volume from "./pages/Volume/Volume.jsx";
 import Temperature from "./pages/Temperature/Temperature.jsx";
 import Time from "./pages/Time/Time.jsx";
-import DropDownHeader from "./components/DropDownHeader/DropDownHeader.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Length />,
+    element: <HomePage />,
   },
   {
     path: "/length",
@@ -39,10 +40,6 @@ const router = createBrowserRouter([
     path: "/time",
     element: <Time />
   },
-  {
-    path: "/teste",
-    element: <DropDownHeader />
-  }
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
