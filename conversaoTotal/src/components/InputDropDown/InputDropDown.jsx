@@ -53,7 +53,7 @@ const InputDropDown = ({ type, options, unit, unit2, setUnit, setUnit2, onChange
         <UnitDropdown options={options} unit={unit} onChange={onChange} />
       </div>
 
-      <button onClick={changeUnit}>
+      <button onClick={changeUnit} className="btn">
         <img src={ChangeButton} alt="" />
       </button>
 

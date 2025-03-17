@@ -20,11 +20,11 @@
   width: 90%;
   border-radius: 10px;
 }
-button:hover {
+.DropDownHeader button:hover {
   border: var(--second-color) 1px solid;
 }
 
-button:focus{
+.DropDownHeader button:focus{
   background-color: #b5b7ba;
   outline: none;
 }
